@@ -3,7 +3,17 @@ entries:
   ray:
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-22T16:08:47.086908+01:00"
+    created: "2022-04-27T15:22:12.033429+01:00"
+    description: A Helm chart for deployments of Ray on Kubernetes.
+    digest: 2d6f010e474dee5d78910ff157a5d4d672acae6e0162c7caccd3bc2604288dc6
+    name: ray
+    type: application
+    urls:
+    - ray-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-04-27T15:22:12.029631+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: b93050bfe9e8c9168e5deab7174910e12d04a1fcdfbb0cdb5c716532e76d273f
     name: ray
@@ -13,7 +23,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-22T16:08:47.081604+01:00"
+    created: "2022-04-27T15:22:12.025883+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: a684155ec3244e4dd3459a95495adade0df7c455103cf4f606f9e3f4f8c98cc6
     name: ray
@@ -21,4 +31,4 @@ entries:
     urls:
     - ray-0.1.0.tgz
     version: 0.1.0
-generated: "2022-04-22T16:08:47.079748+01:00"
+generated: "2022-04-27T15:22:12.022077+01:00"
