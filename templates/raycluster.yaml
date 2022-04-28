@@ -66,15 +66,15 @@ spec:
             configMap:
               name: ray-promtail-config
           containers:
-{{/*          - name: promtail-sidecar*/}}
-{{/*            image: grafana/promtail:2.0.0*/}}
-{{/*            args:*/}}
-{{/*            - -config.file=/etc/promtail/promtail.yaml*/}}
-{{/*            volumeMounts:*/}}
-{{/*            - name: logs*/}}
-{{/*              mountPath: /tmp/ray*/}}
-{{/*            - name: promtail-config*/}}
-{{/*              mountPath: /etc/promtail*/}}
+          - name: promtail-sidecar
+            image: grafana/promtail:2.0.0
+            args:
+            - -config.file=/etc/promtail/promtail.yaml
+            volumeMounts:
+            - name: logs
+              mountPath: /tmp/ray
+            - name: promtai8-config
+              mountPath: /etc/promtail
           - name: ray-node
             imagePullPolicy: Always
             image: {{ $.Values.image }}
