@@ -66,15 +66,6 @@ spec:
             configMap:
               name: ray-promtail-config
           containers:
-          - name: promtail-sidecar
-            image: grafana/promtail:2.0.0
-            args:
-            - -config.file=/etc/promtail/promtail.yaml
-            volumeMounts:
-            - name: logs
-              mountPath: /tmp/ray
-            - name: promtail-config
-              mountPath: /etc/promtail
           - name: ray-node
             imagePullPolicy: Always
             image: {{ $.Values.image }}
@@ -116,6 +107,15 @@ spec:
                 {{- if .GPU }}
                 nvidia.com/gpu: {{ .GPU }}
                 {{- end }}
+          - name: promtail-sidecar
+            image: grafana/promtail:2.0.0
+            args:
+              - -config.file=/etc/promtail/promtail.yaml
+            volumeMounts:
+              - name: logs
+                mountPath: /tmp/ray
+              - name: promtail-config
+                mountPath: /etc/promtail
           {{- if .nodeSelector }}
           nodeSelector:
           {{- toYaml $val.nodeSelector | nindent 12 }}
@@ -128,7 +128,6 @@ spec:
   # Commands to start Ray on the head node. You don't need to change this.
   # Note dashboard-host is set to 0.0.0.0 so that Kubernetes can port forward.
   headStartRayCommands:
-    - sleep 3
     - ray stop
     - ulimit -n 65536; ray start --head --port=6379 --no-monitor --dashboard-host 0.0.0.0
   # Commands to start Ray on worker nodes. You don't need to change this.
