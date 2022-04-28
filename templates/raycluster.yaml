@@ -73,7 +73,7 @@ spec:
             volumeMounts:
             - name: logs
               mountPath: /tmp/ray
-            - name: promtai8-config
+            - name: promtail-config
               mountPath: /etc/promtail
           - name: ray-node
             imagePullPolicy: Always
