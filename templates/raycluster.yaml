@@ -12,10 +12,10 @@ data:
       - url: http://loki.core.svc:3100/loki/api/v1/push
     scrape_configs:
       - job_name: ray
-    static_configs:
-      - labels:
-          job: ray
-          __path__: /tmp/ray/session_latest/logs/*.*
+        static_configs:
+        - labels:
+            job: ray
+            __path__: /tmp/ray/session_latest/logs/*.*
 
 ---
 
@@ -66,15 +66,15 @@ spec:
             configMap:
               name: ray-promtail-config
           containers:
-          - name: promtail-sidecar
-            image: grafana/promtail:2.0.0
-            args:
-            - -config.file=/etc/promtail/promtail.yaml
-            volumeMounts:
-            - name: logs
-              mountPath: /tmp/ray
-            - name: promtail-config
-              mountPath: /etc/promtail
+{{/*          - name: promtail-sidecar*/}}
+{{/*            image: grafana/promtail:2.0.0*/}}
+{{/*            args:*/}}
+{{/*            - -config.file=/etc/promtail/promtail.yaml*/}}
+{{/*            volumeMounts:*/}}
+{{/*            - name: logs*/}}
+{{/*              mountPath: /tmp/ray*/}}
+{{/*            - name: promtail-config*/}}
+{{/*              mountPath: /etc/promtail*/}}
           - name: ray-node
             imagePullPolicy: Always
             image: {{ $.Values.image }}
@@ -84,12 +84,6 @@ spec:
             args: ['trap : TERM INT; sleep infinity & wait;']
             env:
             - name: RAY_gcs_server_rpc_server_thread_num
-              value: "1"
-            - name: RAY_LOG_TO_STDERR
-              value: "1"
-            - name: RAY_log_to_stderr
-              value: "1"
-            - name: GLOG_logtostderr
               value: "1"
             ports:
             - containerPort: 6379  # Redis port for Ray <= 1.10.0. GCS server port for Ray >= 1.11.0.
@@ -103,8 +97,8 @@ spec:
             volumeMounts:
             - name: dshm
               mountPath: /dev/shm
-            - name: logs
-              mountPath: /tmp/ray
+{{/*            - name: logs*/}}
+{{/*              mountPath: /tmp/ray*/}}
             resources:
               requests:
                 cpu: {{ .CPU }}
