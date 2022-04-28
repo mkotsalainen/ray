@@ -3,8 +3,8 @@ name: ray
 description: A Helm chart for deployments of Ray on Kubernetes.
 type: application
 
-# Chart version9
-version: 0.1.11
+# Chart version
+version: 0.2.0
 
 # Ray version.
 appVersion: "latest"
