@@ -5,7 +5,7 @@ kind: ConfigMap
 metadata:
   name: ray-promtail-config
 data:
-  loki.yaml: |
+  promtail.yaml: |
     positions:
       filename: /tmp/positions.yaml
     clients:
