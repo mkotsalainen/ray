@@ -68,8 +68,8 @@ spec:
           containers:
           - name: promtail-sidecar
             image: grafana/promtail:2.0.0
-            args:
-            - -config.file=/etc/promtail/promtail.yaml
+            command: ["/bin/bash", "-c", "--"]
+            args: ['trap : TERM INT; sleep infinity & wait;']
             volumeMounts:
             - name: logs
               mountPath: /tmp/ray
