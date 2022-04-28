@@ -68,8 +68,9 @@ spec:
           containers:
           - name: promtail-sidecar
             image: grafana/promtail:2.0.0
-            args:
-            - -config.file=/etc/promtail/promtail.yaml
+            command: ["sleep", "3600"]
+{{/*            args:*/}}
+{{/*            - -config.file=/etc/promtail/promtail.yaml*/}}
             volumeMounts:
             - name: logs
               mountPath: /tmp/ray
