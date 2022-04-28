@@ -14,8 +14,8 @@ data:
       - job_name: ray
     static_configs:
       - labels:
-        job: ray
-        __path__: /tmp/ray/session_latest/logs/*.*
+          job: ray
+          __path__: /tmp/ray/session_latest/logs/*.*
 
 ---
 
@@ -68,9 +68,8 @@ spec:
           containers:
           - name: promtail-sidecar
             image: grafana/promtail:2.0.0
-            command: ["sleep", "3600"]
-{{/*            args:*/}}
-{{/*            - -config.file=/etc/promtail/promtail.yaml*/}}
+            args:
+            - -config.file=/etc/promtail/promtail.yaml
             volumeMounts:
             - name: logs
               mountPath: /tmp/ray
