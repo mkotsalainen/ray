@@ -3,7 +3,17 @@ entries:
   ray:
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.506751+01:00"
+    created: "2022-04-28T15:32:26.50534+01:00"
+    description: A Helm chart for deployments of Ray on Kubernetes.
+    digest: 8e31f7dd0b7ca7d91958f8e739164f22f8e69ec027f72aa2e952c9c5bdf31ecc
+    name: ray
+    type: application
+    urls:
+    - ray-0.1.11.tgz
+    version: 0.1.11
+  - apiVersion: v2
+    appVersion: latest
+    created: "2022-04-28T15:32:26.140638+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: ee60c35017e18c326b53abec1d92d2454c5a0cb366384fd25f1c9cf590fe8702
     name: ray
@@ -13,7 +23,7 @@ entries:
     version: 0.1.10
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.715629+01:00"
+    created: "2022-04-28T15:32:26.701278+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: 2aefa9536d0c8bc23034164479324b5ae6c4bfb6ab27ea4261137df4772e53c8
     name: ray
@@ -23,7 +33,7 @@ entries:
     version: 0.1.9
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.621381+01:00"
+    created: "2022-04-28T15:32:26.61024+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: 586042811e4ff014728d954e41f2fb9aeac181e4257c4080ef7e5395c74d488c
     name: ray
@@ -33,7 +43,7 @@ entries:
     version: 0.1.8
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.565746+01:00"
+    created: "2022-04-28T15:32:26.565386+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: 0d67be606e707467de796f31f3816bc6dcafa187b42606e78d489cc3ba2923f3
     name: ray
@@ -43,7 +53,7 @@ entries:
     version: 0.1.7
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.541173+01:00"
+    created: "2022-04-28T15:32:26.541372+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: d064830765411522ca69d18f0f9297e41564274496c84114e86b385b8e9ee4cf
     name: ray
@@ -53,7 +63,7 @@ entries:
     version: 0.1.6
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.52638+01:00"
+    created: "2022-04-28T15:32:26.527496+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: 7b7fdbf96f6fbeec274608717c7ddfa5dc9b2c8239bb673c27a1ac8541ca85b9
     name: ray
@@ -63,7 +73,7 @@ entries:
     version: 0.1.5
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.518506+01:00"
+    created: "2022-04-28T15:32:26.518277+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: d21fb4e9831bc2f6156c8c50658db1b63f9e794dbd564525fbd01fe64a3187db
     name: ray
@@ -73,7 +83,7 @@ entries:
     version: 0.1.4
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.513203+01:00"
+    created: "2022-04-28T15:32:26.51236+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: 5197929cbe0b73c40dd5d0405595a9071babf7a90e405fcbb698274c72d9a5f6
     name: ray
@@ -83,7 +93,7 @@ entries:
     version: 0.1.3
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.509448+01:00"
+    created: "2022-04-28T15:32:26.508349+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: 2d6f010e474dee5d78910ff157a5d4d672acae6e0162c7caccd3bc2604288dc6
     name: ray
@@ -93,7 +103,7 @@ entries:
     version: 0.1.2
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.307073+01:00"
+    created: "2022-04-28T15:32:25.939821+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: b93050bfe9e8c9168e5deab7174910e12d04a1fcdfbb0cdb5c716532e76d273f
     name: ray
@@ -103,7 +113,7 @@ entries:
     version: 0.1.1
   - apiVersion: v2
     appVersion: latest
-    created: "2022-04-28T15:24:01.301339+01:00"
+    created: "2022-04-28T15:32:25.936525+01:00"
     description: A Helm chart for deployments of Ray on Kubernetes.
     digest: a684155ec3244e4dd3459a95495adade0df7c455103cf4f606f9e3f4f8c98cc6
     name: ray
@@ -111,4 +121,4 @@ entries:
     urls:
     - ray-0.1.0.tgz
     version: 0.1.0
-generated: "2022-04-28T15:24:01.29954+01:00"
+generated: "2022-04-28T15:32:25.934742+01:00"
