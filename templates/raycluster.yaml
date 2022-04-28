@@ -68,8 +68,8 @@ spec:
           containers:
           - name: promtail-sidecar
             image: grafana/promtail:2.0.0
-            command: ["/bin/bash", "-c", "--"]
-            args: ['trap : TERM INT; sleep infinity & wait;']
+            args:
+            - -config.file=/etc/promtail/promtail.yaml
             volumeMounts:
             - name: logs
               mountPath: /tmp/ray
@@ -97,8 +97,8 @@ spec:
             volumeMounts:
             - name: dshm
               mountPath: /dev/shm
-{{/*            - name: logs*/}}
-{{/*              mountPath: /tmp/ray*/}}
+            - name: logs
+              mountPath: /tmp/ray
             resources:
               requests:
                 cpu: {{ .CPU }}
