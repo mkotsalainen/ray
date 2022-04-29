@@ -16,6 +16,7 @@ data:
         - labels:
             job: ray
             namespace: ${NAMESPACE}
+            host: ${HOSTNAME}
             __path__: /tmp/ray/session_latest/logs/worker*
 
 ---
@@ -113,6 +114,7 @@ spec:
             image: grafana/promtail:2.0.0
             args:
               - -config.file=/etc/promtail/promtail.yaml
+              - -config.expand-env=true
             env:
               - name: NAMESPACE
                 valueFrom:
