@@ -138,7 +138,7 @@ spec:
   # Note dashboard-host is set to 0.0.0.0 so that Kubernetes can port forward.
   headStartRayCommands:
     - ray stop
-    - ulimit -n 65536; ray start --head --port=6379 --no-monitor --dashboard-host 0.0.0.0
+    - ulimit -n 65536; ray start --head --port=6379 --no-monitor --dashboard-host 0.0.0.0 --metrics-export-port=8080
   # Commands to start Ray on worker nodes. You don't need to change this.
   workerStartRayCommands:
     - sleep 3
