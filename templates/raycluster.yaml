@@ -15,7 +15,8 @@ data:
         static_configs:
         - labels:
             job: ray
-            __path__: /tmp/ray/session_latest/logs/*.*
+            namespace: ${NAMESPACE}
+            __path__: /tmp/ray/session_latest/logs/worker*
 
 ---
 
@@ -107,10 +108,16 @@ spec:
                 {{- if .GPU }}
                 nvidia.com/gpu: {{ .GPU }}
                 {{- end }}
+          # Important - this sidecar must come after ray node, otherwise ray won't start
           - name: promtail-sidecar
             image: grafana/promtail:2.0.0
             args:
               - -config.file=/etc/promtail/promtail.yaml
+            env:
+              - name: NAMESPACE
+                valueFrom:
+                  fieldRef:
+                    fieldPath: metadata.namespace
             volumeMounts:
               - name: logs
                 mountPath: /tmp/ray
